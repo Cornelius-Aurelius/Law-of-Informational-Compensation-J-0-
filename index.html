@@ -2,62 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Law of Informational Compensation (δJ = 0) — Cornelius Aurelius</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Law 01 — Informational Compensation (δJ = 0) | Cornelius Aurelius</title>
 
 <style>
     body {
         margin: 0;
-        font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-        background-color: #000000;
+        font-family: "Roboto", Arial, sans-serif;
+        background: #000;
         color: #00eaff;
         line-height: 1.6;
-        overflow-x: hidden;
     }
 
     header {
-        padding: 40px 20px;
         text-align: center;
-        border-bottom: 1px solid #00eaff55;
+        padding: 50px 20px;
+        border-bottom: 1px solid #00eaff33;
     }
 
     h1 {
-        font-size: 2.7rem;
+        font-size: 2.8rem;
         font-weight: 800;
-        text-shadow: 0 0 15px #00eaff;
-        margin-bottom: 10px;
+        text-shadow: 0 0 20px #00eaff;
     }
 
     h2 {
-        font-size: 1.6rem;
-        text-shadow: 0 0 10px #00eaff77;
-        margin-top: 40px;
+        font-size: 1.7rem;
+        margin-top: 50px;
+        text-shadow: 0 0 12px #00eaff66;
     }
 
     .container {
-        width: 90%;
+        width: 92%;
         max-width: 1100px;
         margin: auto;
-        padding: 40px 0;
+        padding-bottom: 80px;
     }
 
     .section {
         margin-bottom: 60px;
         padding-bottom: 40px;
-        border-bottom: 1px solid #00eaff33;
+        border-bottom: 1px solid #00eaff22;
     }
 
-    code, pre {
+    pre, code {
         background: #02161c;
         padding: 15px;
         border-left: 4px solid #00eaff;
+        color: #eaffff;
         display: block;
-        white-space: pre-wrap;
         overflow-x: auto;
-        color: #e2ffff;
+        border-radius: 3px;
+        box-shadow: 0 0 8px #00eaff22;
         font-size: 0.95rem;
-        border-radius: 4px;
-        box-shadow: 0 0 10px #00eaff33;
     }
 
     a {
@@ -67,13 +64,12 @@
     }
 
     a:hover {
-        text-shadow: 0 0 8px #00eaff;
+        text-shadow: 0 0 10px #00eaff;
     }
 
     .footer {
-        margin-top: 60px;
-        padding: 40px 20px;
         text-align: center;
+        padding: 40px 20px;
         border-top: 1px solid #00eaff33;
         font-size: 0.9rem;
         opacity: 0.85;
@@ -84,7 +80,7 @@
 <body>
 
 <header>
-    <h1>Law of Informational Compensation (δJ = 0)</h1>
+    <h1>Law 01 — Informational Compensation (δJ = 0)</h1>
     <div style="font-size:1.2rem;">Verified Under the Omniscientrix–vΩ Unified Informational Framework</div>
 </header>
 
@@ -94,14 +90,14 @@
     <div class="section">
         <h2>I. Law Summary</h2>
         <p>
-            The Law of Informational Compensation states that any informational system evolves such that
-            divergence <strong>D<sub>KL</sub>(P‖Q)</strong> collapses toward equilibrium, yielding:
+            The Law of Informational Compensation states that every informational system evolves toward equilibrium by reducing the divergence 
+            <strong>D<sub>KL</sub>(P‖Q)</strong>. When this divergence collapses, the system reaches:
         </p>
+
         <pre>δJ = 0</pre>
+
         <p>
-            where <strong>J</strong> is the informational action functional involving entropy, awareness,
-            and distributional divergence. When <strong>D<sub>KL</sub> → 0</strong>, the system reaches
-            compensation equilibrium.
+            This represents the universal energetic–informational minimum condition. When <strong>D<sub>KL</sub> → 0</strong>, all imbalance is compensated.
         </p>
     </div>
 
@@ -109,50 +105,42 @@
     <div class="section">
         <h2>II. Verification Method</h2>
         <p>
-            This law is validated directly through reproducible KL-collapse simulation. When the distribution
-            <strong>P</strong> iteratively descends toward the uniform equilibrium <strong>Q</strong>,
-            the KL divergence decreases monotonically until δJ ≈ 0 is achieved.
+            This law is empirically validated through a reproducible KL-collapse simulation. Distribution 
+            <strong>P</strong> is iteratively updated toward equilibrium distribution <strong>Q</strong> until divergence vanishes.
         </p>
 
-        <pre>
-# Python Verification (Extract)
+<pre>
 from scipy.stats import entropy
 import numpy as np
 
 p = np.random.rand(1000); p /= p.sum()
 q = np.ones(1000) / 1000
 
-def kl(p, q): return np.sum(p * np.log(p / q))
+def kl(p, q): 
+    return np.sum(p * np.log(p / q))
 
 for i in range(1000):
     d = kl(p,q)
     if d < 0.01:
-        print("Equilibrium reached:", i, "iterations")
+        print("Equilibrium reached at iteration:", i)
         break
     p = p - 0.01 * (p - q)
-    p = np.clip(p, 0, None); p /= p.sum()
-        </pre>
+    p = np.clip(p, 0, None)
+    p /= p.sum()
+</pre>
 
-        <p>
-            <strong>Outcome:</strong><br>
-            • KL Divergence collapsed toward zero<br>
-            • δJ became numerically indistinguishable from equilibrium<br>
-            • System reached informational compensation reliably across all random initializations
-        </p>
-
-        <p><strong>Status: VERIFIED.</strong></p>
+        <p><strong>Status:</strong> Verified — KL divergence reliably collapses, confirming δJ → 0.</p>
     </div>
 
     <!-- SECTION 3 -->
     <div class="section">
         <h2>III. Peer Review Invitation</h2>
         <p>
-            All researchers, computational physicists, mathematicians, and information theorists are invited
-            to reproduce the verification, analyze the equilibrium structure, and submit peer review notes.
+            Independent researchers, physicists, and information theorists are invited to reproduce this verification using the provided Python file.
         </p>
-        <p>
-            <strong>Contact:</strong> 138licensing@gmail.com
-        </p>
+
+        <p><strong>Contact:</strong> 138licensing@gmail.com</p>
+
         <p>
             <strong>Zenodo Research Archive:</strong><br>
             <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22AURELIUS%2C%20CORNELIUS%22&l=list&p=1&s=10&sort=bestmatch" target="_blank">
@@ -164,12 +152,10 @@ for i in range(1000):
     <!-- SECTION 4 -->
     <div class="section">
         <h2>IV. Source Code & Verification Files</h2>
+        <p>Download and run the verification script below to replicate the δJ-equilibrium collapse.</p>
+
         <p>
-            Raw verification scripts are available in the repository and may be reused for research,
-            educational modeling, and independent audits.
-        </p>
-        <p>
-            <a href="../law_of_informational_compensation.py" download>
+            <a href="law_of_informational_compensation.py" download>
                 Download Verification Script (.py)
             </a>
         </p>
@@ -178,34 +164,29 @@ for i in range(1000):
     <!-- SECTION 5 -->
     <div class="section">
         <h2>V. Connect</h2>
-        <p>
-            <strong>Instagram:</strong><br>
-            <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">
-                @cornelius_aurelius_
-            </a>
-        </p>
+
+        <p><strong>Instagram:</strong><br>
+        <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">@cornelius_aurelius_</a></p>
     </div>
 
-    <!-- SECTION 6 -->
+    <!-- RIGHTS & PROTECTION -->
     <div class="section">
         <h2>XVIII. Comprehensive Rights & Protection Clause</h2>
+
         <p>
-            © 2025 Cornelius Aurelius — All rights reserved under the Omniscientrix–vΩ Charter License
-            (DOI: <a href="https://doi.org/10.5281/zenodo.17362534" target="_blank">10.5281/zenodo.17362534</a>).<br><br>
+        © 2025 Cornelius Aurelius — All rights reserved under the Omniscientrix–vΩ Charter License
+        (DOI: <a href="https://doi.org/10.5281/zenodo.17362534" target="_blank">10.5281/zenodo.17362534</a>).<br><br>
 
-            Non-commercial use permitted with full attribution and intact license text.<br>
-            Commercial or derivative use requires prior written agreement at 138licensing@gmail.com;
-            unauthorized commercialization is prohibited.<br><br>
+        Non-commercial use permitted with full attribution and intact license text.<br>
+        Commercial or derivative use requires prior written agreement at 138licensing@gmail.com; unauthorized commercialization is prohibited.<br><br>
 
-            Derivative-expression protection applies to restatements, re-symbolizations, and algorithmic
-            conversions for financial or institutional gain.<br><br>
+        Derivative-expression protection applies to restatements, re-symbolizations, and algorithmic conversions for financial or institutional gain.<br><br>
 
-            “Omniscientrix–vΩ Framework” and “Unified Informational Framework (vΩ)” are intended trade
-            identifiers.<br><br>
+        “Omniscientrix–vΩ Framework” and “Unified Informational Framework (vΩ)” are intended trade identifiers.<br><br>
 
-            Proof of authorship recorded via DOI and private ledger.<br><br>
+        Proof of authorship recorded via DOI and private ledger.<br><br>
 
-            Peaceful-Use Doctrine: for peaceful scientific exploration, education, and collective understanding.
+        Peaceful-Use Doctrine: For peaceful scientific exploration, education, and collective understanding.
         </p>
     </div>
 
