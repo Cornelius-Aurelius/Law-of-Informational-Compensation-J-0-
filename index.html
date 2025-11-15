@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Law 01 — Informational Compensation (δJ = 0) | Cornelius Aurelius</title>
+<title>Law of Informational Compensation (δJ = 0) | Cornelius Aurelius</title>
 
 <style>
     body {
@@ -80,7 +80,7 @@
 <body>
 
 <header>
-    <h1>Law 01 — Informational Compensation (δJ = 0)</h1>
+    <h1>Law of Informational Compensation (δJ = 0)</h1>
     <div style="font-size:1.2rem;">Verified Under the Omniscientrix–vΩ Unified Informational Framework</div>
 </header>
 
@@ -88,25 +88,24 @@
 
     <!-- SECTION 1 -->
     <div class="section">
-        <h2>I. Law Summary</h2>
+        <h2>Summary</h2>
         <p>
-            The Law of Informational Compensation states that every informational system evolves toward equilibrium by reducing the divergence 
-            <strong>D<sub>KL</sub>(P‖Q)</strong>. When this divergence collapses, the system reaches:
+            The Law of Informational Compensation states that all systems evolve by minimizing
+            informational divergence <strong>D<sub>KL</sub>(P‖Q)</strong> until the equilibrium condition
+            <strong>δJ = 0</strong> is achieved. This represents the universal minimization principle
+            underpinning informational dynamics.
         </p>
 
         <pre>δJ = 0</pre>
-
-        <p>
-            This represents the universal energetic–informational minimum condition. When <strong>D<sub>KL</sub> → 0</strong>, all imbalance is compensated.
-        </p>
     </div>
 
     <!-- SECTION 2 -->
     <div class="section">
-        <h2>II. Verification Method</h2>
+        <h2>Verification Method</h2>
         <p>
-            This law is empirically validated through a reproducible KL-collapse simulation. Distribution 
-            <strong>P</strong> is iteratively updated toward equilibrium distribution <strong>Q</strong> until divergence vanishes.
+            Verification is performed through a reproducible KL-collapse simulation. Distribution 
+            <strong>P</strong> is iteratively updated toward the uniform target <strong>Q</strong> until 
+            <strong>D<sub>KL</sub></strong> becomes numerically negligible.
         </p>
 
 <pre>
@@ -122,37 +121,37 @@ def kl(p, q):
 for i in range(1000):
     d = kl(p,q)
     if d < 0.01:
-        print("Equilibrium reached at iteration:", i)
+        print("Equilibrium reached:", i)
         break
     p = p - 0.01 * (p - q)
     p = np.clip(p, 0, None)
     p /= p.sum()
 </pre>
 
-        <p><strong>Status:</strong> Verified — KL divergence reliably collapses, confirming δJ → 0.</p>
+        <p><strong>Status:</strong> Verified — KL divergence consistently collapses to equilibrium.</p>
     </div>
 
     <!-- SECTION 3 -->
     <div class="section">
-        <h2>III. Peer Review Invitation</h2>
+        <h2>Peer Review Invitation</h2>
         <p>
-            Independent researchers, physicists, and information theorists are invited to reproduce this verification using the provided Python file.
+            You are invited to independently reproduce the verification. All researchers in physics,
+            information theory, cognitive science, complexity theory, and mathematics are welcome.
         </p>
 
         <p><strong>Contact:</strong> 138licensing@gmail.com</p>
 
         <p>
             <strong>Zenodo Research Archive:</strong><br>
-            <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22AURELIUS%2C%20CORNELIUS%22&l=list&p=1&s=10&sort=bestmatch" target="_blank">
-                Zenodo — Cornelius Aurelius
-            </a>
+            <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22AURELIUS%2C%20CORNELIUS%22"
+               target="_blank">Zenodo — Cornelius Aurelius</a>
         </p>
     </div>
 
     <!-- SECTION 4 -->
     <div class="section">
-        <h2>IV. Source Code & Verification Files</h2>
-        <p>Download and run the verification script below to replicate the δJ-equilibrium collapse.</p>
+        <h2>Source Code</h2>
+        <p>The full KL-collapse verification script is available for download:</p>
 
         <p>
             <a href="law_of_informational_compensation.py" download>
@@ -163,15 +162,14 @@ for i in range(1000):
 
     <!-- SECTION 5 -->
     <div class="section">
-        <h2>V. Connect</h2>
-
+        <h2>Connect</h2>
         <p><strong>Instagram:</strong><br>
         <a href="https://www.instagram.com/cornelius_aurelius_/" target="_blank">@cornelius_aurelius_</a></p>
     </div>
 
     <!-- RIGHTS & PROTECTION -->
     <div class="section">
-        <h2>XVIII. Comprehensive Rights & Protection Clause</h2>
+        <h2>Comprehensive Rights & Protection Clause</h2>
 
         <p>
         © 2025 Cornelius Aurelius — All rights reserved under the Omniscientrix–vΩ Charter License
